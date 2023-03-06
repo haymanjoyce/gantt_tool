@@ -1,16 +1,23 @@
-# This is a sample Python script.
+#!/usr/bin/env python3
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+import argparse
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+import pandas
+import svg
+import pandas as pd
 
 
-# Press the green button in the gutter to run the script.
+def packages():
+    print("argparse from Standard Library (alt: typer)")
+    print("svg from PyPI for programmatically creating SVG mark up (alt: drawsvg2)")
+    print("pandas from PyPI for reading CSV and Excel files (alt: openpyxl")
+
+
+def read_file(file):
+    df = pd.read_csv(file)
+    print(df)
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    packages()
+    # read_file("/Users/richard/Desktop/sample.csv")
