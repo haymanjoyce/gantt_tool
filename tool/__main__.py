@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 
+"""Entry point script."""
+# tool/__main__.py
+
+from tool import cli
+
 import typer
 import svg
 import pandas as pd
@@ -21,6 +26,11 @@ def read_file(file):
     print(df)
 
 
+def main():
+    print(cli.__name__)
+
+
+# if module run as script
 if __name__ == '__main__':
-    packages()
-    # read_file("/Users/richard/Desktop/sample.csv")
+    main()
+
